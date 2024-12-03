@@ -1,38 +1,64 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://static.vecteezy.com/system/resources/previews/025/218/366/non_2x/the-basketball-is-in-an-enclosed-splash-and-being-sprayed-with-water-in-the-background-photo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #dd6e25;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  .card {
+    background: #000;  
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(168, 38, 38, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(216, 86, 86, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .details {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .details h2 {
+  font-size: 1.5em;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card .details p {
+  margin: 10px 0;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card .details .jersey {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f39c12;
 }
